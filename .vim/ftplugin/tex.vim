@@ -15,6 +15,11 @@ let g:Tex_CompileRule_pdf = 'mkdir -p out && pdflatex -output-directory=out -int
 let g:Tex_GotoError = 0
 let g:Tex_ViewRule_pdf = 'evince'
 
+"Remap key a so switch word case
+nnoremap a mkb~`kh 
+
+"Remaps for spell checking
 nnoremap <C-c> z=
+nnoremap <C-x> ]s 
 
 set tw=80 
