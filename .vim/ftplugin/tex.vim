@@ -15,5 +15,6 @@ let g:Tex_CompileRule_pdf = 'mkdir -p out && pdflatex -output-directory=out -int
 let g:Tex_GotoError = 0
 let g:Tex_ViewRule_pdf = 'evince'
 
+nnoremap <C-c> z=
 
 set tw=80 
