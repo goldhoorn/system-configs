@@ -1,3 +1,8 @@
+" Put plugins and dictionaries in this dir (also on Windows)
+let vimDir = '$HOME/system-configs/.vim'
+let &runtimepath.=','.vimDir
+
+
 execute pathogen#infect()
 
 set nu
@@ -11,17 +16,14 @@ set softtabstop=4
 set tabstop=8
 set expandtab
 filetype on
+filetype plugin on
 filetype plugin indent on
 
 augroup filetypedetect
     au! BufRead,BufNewFile *.orogen setfiletype ruby 
-    au! BufRead,BufNewFile *.tex :set tw=80 
     au! BufRead,BufNewFile *.page :set tw=80 
     au! BufRead,BufNewFile COMMIT_EDITMSG :set tw=72
-"    autocmd FileType tex set tw=80 
 augroup END
-
-"autocmd FileType tex set textwidth=80 
 
 "set viminfo='10,\"100,:20,%,n~/.viminfo
 ":set viminfo?
@@ -73,9 +75,6 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_always_populate_location_list = 1
-" Put plugins and dictionaries in this dir (also on Windows)
-let vimDir = '$HOME/.vim'
-let &runtimepath.=','.vimDir
 
 " Keep undo history across sessions by storing it in a file
 if has('persistent_undo')
@@ -120,3 +119,4 @@ nnoremap <Space> za
 
 let c_space_errors = 1
 color desert
+
