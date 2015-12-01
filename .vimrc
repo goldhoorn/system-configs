@@ -107,15 +107,21 @@ autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
 nnoremap <F5> :YcmDiags<CR>
 let g:ycm_error_symbol = 'E'
 let g:ycm_warning_symbol = 'w'
-nnoremap <C-]> :YcmCompleter GoToImprecise<CR>
+nnoremap <C-h> :YcmCompleter GoToImprecise<CR>
+"Ctrl-o go backward
+"ctrl-i go forward
 
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
 "au FileType xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
 
+"vim folding
 autocmd Syntax c,cpp,vim,xml,html,xhtml,perl set foldmethod=syntax
 autocmd Syntax c,cpp,vim,xml,html,xhtml,perl normal zR
 nnoremap <Space> za
+
+"Fast replace shortcut
+:nnoremap ' :%s/\<<C-r><C-w>\>//g<Left><Left>
 
 let c_space_errors = 1
 color desert
