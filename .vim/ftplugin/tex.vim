@@ -22,4 +22,6 @@ nnoremap a mkb~`kh
 nnoremap <C-c> z=
 nnoremap <C-x> ]s 
 
-set tw=80 
+set tw=80
+set formatoptions+=w 
+nnoremap <C-f> gggqG
