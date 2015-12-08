@@ -1,0 +1,4 @@
+#!/bin/bash
+
+grep -ri -I --exclude-dir=build --exclude-dir="build-*" --exclude-dir="logs" --exclude-dir=doc --exclude-dir=.orogen --exclude-dir=.git "$1" *
+
