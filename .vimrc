@@ -126,3 +126,9 @@ nnoremap <Space> za
 let c_space_errors = 1
 color desert
 
+"Better background for hlsearch
+hi Search cterm=bold ctermfg=red ctermbg=green
+
+"Enable support for document specific headers
+set modeline
+

@@ -6,8 +6,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=10000
-HISTFILESIZE=20000
+HISTSIZE=100000
+HISTFILESIZE=200000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -102,8 +102,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=$PATH=$HOME/system-configs/bin/
+export PATH=$HOME/system-configs/bin/:$PATH
 
+#Dont override history for multiple shells
+export PROMPT_COMMAND='history -a'
+export LANG=en_US.utf8
+export LANGUAGE=en_US.utf8
 #export PATH=$PATH:$HOME/.local/bin
 #export PATH=/usr/lib/ccache:$PATH
 #export CCACHE_PREFIX=icecc
