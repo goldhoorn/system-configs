@@ -117,7 +117,7 @@ au FileType xml setlocal foldmethod=syntax
 
 "vim folding
 autocmd Syntax c,cpp,vim,xml,html,xhtml,perl set foldmethod=syntax
-autocmd Syntax c,cpp,vim,xml,html,xhtml,perl normal zR
+autocmd Syntax c,cpp,vim,xml,html,xhtml,perl,tex normal zR
 nnoremap <Space> za
 
 "Fast replace shortcut
