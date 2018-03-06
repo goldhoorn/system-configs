@@ -1,4 +1,5 @@
 DIR=$PWD
+sudo apt-get install cmake build-essential git libpython2.7-dev
 git submodule update --init --recursive
 cd .vim/bundle/YouCompleteMe
 ./install.sh --clang-completer
