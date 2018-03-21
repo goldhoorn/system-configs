@@ -115,3 +115,10 @@ export LANGUAGE=en_US.utf8
 #export CXX=clang++-3.6
 #export CC=clang-3.6
 
+
+#Setting Terminal prompt to user@machine:path
+PROMPT_COMMAND='echo -en "\033]0; $USER@$HOSTNAME:$("pwd") \a"'
+
+
+#making grep colorful
+export GREP_OPTIONS='--color=auto'

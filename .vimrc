@@ -89,18 +89,19 @@ endif
 set nobackup
 set noswapfile
 
+" \ "IndentWidth" : "4",
+" \ "BreakBeforeBraces" : "Linux",
+"    \ "ConstructorInitializerAllOnOneLineOrOnePerLine" : "false"
+"    \ "BreakConstructorInitializersBeforeComma" : "true",
 " clang-format
 let g:clang_format#style_options = {
     \ "BasedOnStyle" : "Google",
-    \ "IndentWidth" : "4",
     \ "Standard" : "C++11",
-    \ "ColumnLimit" : "200",
-    \ "BreakBeforeBraces" : "Linux",
-    \ "BreakConstructorInitializersBeforeComma" : "true",
-    \ "ConstructorInitializerAllOnOneLineOrOnePerLine" : "false"
+    \ "ColumnLimit" : "100",
+    \ "BinPackParameters": "false",
     \ }
 
-let g:clang_format#command = "clang-format-3.4"
+let g:clang_format#command = "clang-format-3.8"
 let g:clang_format#detect_style_file = 1
 autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
 
@@ -108,8 +109,13 @@ nnoremap <F5> :YcmDiags<CR>
 let g:ycm_error_symbol = 'E'
 let g:ycm_warning_symbol = 'w'
 nnoremap <C-h> :YcmCompleter GoToImprecise<CR>
+"nnoremap <C-p> :YcmCompleter GoToReferences<CR>
 "Ctrl-o go backward
 "ctrl-i go forward
+
+"Swap forward backward to make it more intuitive (for me)
+nnoremap <C-i> <C-o>
+nnoremap <C-o> <C-i>
 
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
