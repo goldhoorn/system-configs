@@ -1,8 +1,7 @@
 DIR=$PWD
-sudo apt-get install cmake build-essential git libpython2.7-dev
+sudo apt-get install cmake build-essential git libpython2.7-dev vim-youcompleteme 
 git submodule update --init --recursive
-cd .vim/bundle/YouCompleteMe
-./install.sh --clang-completer
+vam install youcompleteme
 if [ -f ~/.vimrc ]; then
     mv ~/.vimrc ~/.vimrc-old-`date +"%Y%m%d"`
 fi;
